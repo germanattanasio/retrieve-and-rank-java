@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Document Conversion Demo</title>
+<title>Retrieve and Rank Demo</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -67,11 +67,11 @@
 				<li class="base--li banner--service-link-item">
 					<a href="http://www.ibm.com/smarterplanet/us/en/ibmwatson/developercloud/doc/retrieve-and-rank/" class="base--a" target="_blank">Documentation</a>
 				</li>
-				<li class="base--li banner--service-link-item" target="_blank">
-					<a href="https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/retrieve-and-rank-nodejs" class="base--a" target="_blank">Fork and Deploy on Bluemix</a>
+        <li class="base--li banner--service-link-item" target="_blank">
+					<a href="https://github.com/watson-developer-cloud/retrieve-and-rank-java" class="base--a" target="_blank">Fork on Github</a>
 				</li>
 				<li class="base--li banner--service-link-item" target="_blank">
-					<a href="https://github.com/watson-developer-cloud/retrieve-and-rank-nodejs" class="base--a" target="_blank">Fork on Github</a>
+					<a href="https://bluemix.net/deploy?repository=https://github.com/watson-developer-cloud/retrieve-and-rank-java" class="base--a" target="_blank">Fork and Deploy on Bluemix</a>
 				</li>
 				</ul>
 			</div>
@@ -108,81 +108,36 @@
     <div class="toggle">
 			<div class="toggle--item active">Machine learning approach</div>
 		</div>
-		<div class="results">
-
-			<div class="results--item ng-scope" ng-repeat="rank in rnrController.ranked">
-				<div class="results--item-container">
-					<div class="results--item-rank">
-						<span class="results--increase-icon icon results--increase-icon_UP icon-arrow_up"
-              ng-class="{'results--increase-icon_UP': 1 >= 0, 'icon-arrow_up': 1 >= 0, 'results--increase-icon_DOWN': 1 < 0, 'icon-arrow_down': 1 < 0}"></span>
-            <span class="results--increase-value ng-binding">1</span>
-					</div>
-					<div class="results--basic-info">
-						<div class="results--item-text ng-binding">
-							theory of aircraft structural models subjected to aerodynamic heating and external loads .
-							<span class="icon icon-see_more results--see-more" ng-click="rnrController.toggleContent($event)"></span>
-						</div>
-						<div class="results--item-score">
-							<div class="results--item-score-title"> Domain expert review</div>
-								<div class="results--item-score-value">
-									<div class="results--item-score-bar" ng-class="0 > 0 ? 'green':''"></div>
-                  <div class="results--item-score-bar" ng-class="0 > 1 ? 'green':''"></div>
-                  <div class="results--item-score-bar" ng-class="0 > 2 ? 'green':''"></div>
-                  <div class="results--item-score-bar" ng-class="0 > 3 ? 'green':''"></div>
-								</div>
-							</div>
-					</div>
-					<div class="results--more-info" style="display: none;">
-						<blockquote class="results--item-details base--blockquote ng-binding">
-							theory of aircraft structural models subjected to aerodynamic heating and external loads .   the problem of investigating the simultaneous effects of transient aerodynamic heating and external loads on aircraft structures for the purpose of determining the ability of the structure to withstand flight to supersonic speeds is studied .  by dimensional analyses it is shown that .. constructed of the same materials as the aircraft will be thermally similar to the aircraft with respect to the flow of heat through the structure will be similar to those of the aircraft when the structural model is constructed at the same temperature as the aircraft . external loads will be similar to those of the aircraft . subjected to heating and cooling that correctly simulate the aerodynamic heating of the aircraft, except with respect to angular velocities and angular accelerations, without requiring determination of the heat flux at each point on the surface and its variation with time . acting on the aerodynamically heated structural model to those acting on the aircraft is determined for the case of zero angular velocity and zero angular acceleration, so that the structural model may be subjected to the external loads required for simultaneous simulation of stresses and deformations due to external loads .
-						</blockquote>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
+		<div class="service--results"></div>
     <div class="toggle">
 			<div class="toggle--item active">Standard search</div>
 		</div>
-		<div class="results">
-
-      <div class="results--item ng-scope" ng-repeat="retrieved in rnrController.retrieved">
-        <div class="results--item-container">
-          <div class="results--basic-info">
-            <div class="results--item-text ng-binding">
-              flutter of aerodynamically heated aluminium-alloy and stainless steel panels with length-width ratio of 10 at mach 3. 0.
-              <span class="icon icon-see_more results--see-more" ng-click="rnrController.toggleContent($event)"></span>
-            </div>
-            <div class="results--item-score">
-              <div class="results--item-score-title">
-                Domain expert review
-              </div>
-              <div class="results--item-score-value">
-                <div class="results--item-score-bar" ng-class="0 > 0 ? 'green':''">
-                </div>
-                <div class="results--item-score-bar" ng-class="0 > 1 ? 'green':''">
-                </div>
-                <div class="results--item-score-bar" ng-class="0 > 2 ? 'green':''">
-                </div>
-                <div class="results--item-score-bar" ng-class="0 > 3 ? 'green':''">
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="results--more-info">
-            <blockquote class="results--item-details base--blockquote ng-binding">
-              flutter of aerodynamically heated aluminium-alloy and stainless steel panels with length-width ratio of 10 at mach 3. 0. an investigation of the effects of aerodynamic heating on the flutter of multibay external-skin panels has been carried out at a mach
-              number of 3.0 in the langley 9- by 6-foot thermal structures tunnel . both aluminum-alloy and 17-7 ph stainless-steel panels with a length-width ratio of 10 for each bay were tested at dynamic pressures between addition, a few tests were made
-              on the lower vertical stabilizer of the x-15 airplane which has external-skin panels unsupported for a length all panels showed flutter boundaries characterized by an increase in panel thickness required to prevent flutter with increasing thermally
-              induced stress prior to buckling . after buckling the panels showed flutter boundaries characterized by a decrease in thickness required to prevent flutter with further increases in thermal stress . the largest thickness required to prevent flutter
-              in the presence of aerodynamic heating occurred at the transition between the flat-panel boundary and the buckled-panel boundary . this peak value (for aluminum-alloy panel) was as much as 60 percent greater than the extrapolated value for an
-              unheated, unloaded panel . values of the modified-thickness-ratio flutter parameter for the unstressed panels (obtained by extrapolation) were in fair agreement for the aluminum, steel, and x-15 stabilizer panels . peak values at transition, however,
-              showed large differences due to apparently minor changes in panel-support construction and or changes in panel-skin material .
-            </blockquote>
-          </div>
-        </div>
+		<div class="standard--results"></div>
+  </div>
+</div>
+<div class="results--item result--template" style="display:none;">
+  <div class="results--item-container">
+    <div class="results--item-rank">
+      <span class="results--increase-icon icon" ></span>
+      <span class="results--increase-value "></span>
+    </div>
+    <div class="results--basic-info">
+      <div class="results--item-text">
+        <span class="icon icon-see_more results--see-more"></span>
       </div>
+      <div class="results--item-score">
+        <div class="results--item-score-title"> Domain expert review</div>
+          <div class="results--item-score-value">
+            <div class="results--item-score-bar" ng-class="0 > 0 ? 'green':''"></div>
+            <div class="results--item-score-bar" ng-class="0 > 1 ? 'green':''"></div>
+            <div class="results--item-score-bar" ng-class="0 > 2 ? 'green':''"></div>
+            <div class="results--item-score-bar" ng-class="0 > 3 ? 'green':''"></div>
+          </div>
+      </div>
+    </div>
+    <div class="results--more-info" style="display: none;">
+      <blockquote class="results--item-details base--blockquote">
+      </blockquote>
     </div>
   </div>
 </div>

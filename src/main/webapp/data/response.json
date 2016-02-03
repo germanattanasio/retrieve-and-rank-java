@@ -9,7 +9,7 @@
 		"body": "viscous compressible and incompressible flow in slender channels .   an analytical study is made of viscous flow in slender channels .  similar solutions to the approximate equations of motion, valid for flow at moderate or high reynolds numbers in slender channels, are found for incompressible two-dimensional and axisymmetric flows and for compressible flows through two-dimensional channels with adiabatic walls .  a study of compressible flows in convergent-divergent channels yields results regarding the effect of viscosity on the location of the sonic line, on the pressure ratio at the geometric throat and on the discharge coefficient for such channels .",
 		"solrRank": 2,
 		"finalRank": 6,
-		"relevance": 0
+		"relevance": 3
 	}, {
 		"answerId": "270",
 		"score": 2.6158342,
@@ -18,7 +18,7 @@
 		"body": "on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .   combined free and forced convective heat transfer in vertical channels has been studied by many researchers .  due to the need for engineering design information there have been many papers concerning cases of fully developed flow with varying wall temperature .  forced flows in a channel of electrically conducting fluid with a transverse magnetic field have been studied and the large effects of a magnetic field on the flow pattern have been established .   flows of combined free and forced convection in electrically conducting fluids in vertical channels with a transverse magnetic field are expected to attract attention in future engineering applications, for example, in a magneto-hydrodynamic generator or in plasma studies .  however, except for a report by gershuni and zhukhovitskii (1) concerning a particular case, no general study has been published .   this paper is a general treatment of fully developed, free and forced convective, laminar, magneto-hydrodynamic flow in a vertical channel with a transverse magnetic field .  it includes combined free and forced convective flows in channels without a magnetic field reported by ostrach (2), tao (3), etc. as special cases .  hartmann flow (4) is included in the other limit .",
 		"solrRank": 3,
 		"finalRank": 2,
-		"relevance": 0
+		"relevance": 2
 	}, {
 		"answerId": "34",
 		"score": 2.5172596,
@@ -37,7 +37,7 @@
 		"body": "the flow past pitot tube at low reynolds numbers, part 1-dash the numerical solution of the navier-stokes equations for steady viscous axisymmetric flow, part 2-dash the effects of viscosity and orifice size on a pitot tube at low reynolds numbers . in this report numerical methods used to solve the navier-stokes equations for steady viscous two-dimensional flow are extended to include the case of axial symmetry . the equations and their finite difference approximations are derived working in cylindrical polar co-ordinates with the stokes' stream function and the vorticity as variables . a new method of dealing with the boundary conditions is given . the effects of viscosity and orlfice size on a blunt-nosed pitot tube have been theoretically investigated up to a reynolds number of ten, where the reynolds number has been based on the radius of the tube . results are expressed in terms of a pressure coefficient where p is the pressure measured in the tube, p the density of the fluid, and p  and u the static pressure and velocity in an undisturbed flow at the position of the tube . the values of c for a blunt-nosed tube are found to be less than those for tubes with hemispheroidal heads, but always greater than unity in the range considered . the effect of the orifice size is to decrease c as the orifice size increases, this decrease is very small but increases  with the reynolds number . at a reynolds number of ten the decrease is at most five per cent of the value of c when there is no orifice . it is suggested that the decrease of c below unity found in some experimental investigations at a higher reynolds number could be due to the effects of orifice size .",
 		"solrRank": 5,
 		"finalRank": 2,
-		"relevance": 0
+		"relevance": 3
 	}, {
 		"answerId": "270",
 		"score": 0.6718964,
@@ -46,7 +46,7 @@
 		"body": "on combined free and forced convection laminar magnetohydrodynamic flow and heat transfer in channels with transverse magnetic field .   combined free and forced convective heat transfer in vertical channels has been studied by many researchers .  due to the need for engineering design information there have been many papers concerning cases of fully developed flow with varying wall temperature .  forced flows in a channel of electrically conducting fluid with a transverse magnetic field have been studied and the large effects of a magnetic field on the flow pattern have been established .   flows of combined free and forced convection in electrically conducting fluids in vertical channels with a transverse magnetic field are expected to attract attention in future engineering applications, for example, in a magneto-hydrodynamic generator or in plasma studies .  however, except for a report by gershuni and zhukhovitskii (1) concerning a particular case, no general study has been published .   this paper is a general treatment of fully developed, free and forced convective, laminar, magneto-hydrodynamic flow in a vertical channel with a transverse magnetic field .  it includes combined free and forced convective flows in channels without a magnetic field reported by ostrach (2), tao (3), etc. as special cases .  hartmann flow (4) is included in the other limit .",
 		"solrRank": 2,
 		"finalRank": 3,
-		"relevance": 0
+		"relevance": 2
 	}, {
 		"answerId": "1222",
 		"score": 0.6024447,
