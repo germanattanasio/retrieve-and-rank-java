@@ -50,23 +50,27 @@ $(document).ready(function() {
   });
 
   $('.input--question-generator').click(function(){
-    query = queries[Math.floor(Math.random() * queries.length)];
+//    query = queries[Math.floor(Math.random() * queries.length)];
+	  query = queries[19];
 
     $query.text(query.query);
 
-    $.get('data/response.json').then(function(data) {
-      var response = JSON.parse(data);
-
+    $.ajax('api/query', { 
+    	data : JSON.stringify(query),
+    	contentType : 'application/json',
+    	type : 'POST'
+    }).then(function(response) {
+    
       // standard results - solr
       $standardResults.empty();
-      response.solr_results.map(createResultNode.bind(null, $template, false))
+      response.solrResults.map(createResultNode.bind(null, $template, false))
       .forEach(function(e){
         $standardResults.append(e);
       });
 
       // service results - solr + ranker
       $serviceResults.empty();
-      response.ranked_results.map(createResultNode.bind(null, $template, true))
+      response.rankedResults.map(createResultNode.bind(null, $template, true))
       .forEach(function(e){
         $serviceResults.append(e);
       });
@@ -74,7 +78,7 @@ $(document).ready(function() {
       $output.show();
     }, _error);
 
-    function createResultNode($template, showRanking, result) {
+    function createResultNode($template, showRanking, result, index) {
       var node = $template.last().clone().show();
 
       node.find('.results--item-text').prepend(result.title);
@@ -84,18 +88,18 @@ $(document).ready(function() {
       // ranking result
       if (showRanking){
         var iconClass = 'results--increase-icon_UP icon-arrow_up';
-        var rank = result.finalRank - result.solrRank;
+        var rank = result.solrRank - index -1;
         if (rank < 0)
           iconClass = 'results--increase-icon_DOWN icon-arrow_down';
 
         node.find('.results--increase-icon').addClass(iconClass);
-        node.find('.results--increase-value').text(Math.abs(rank));
+        node.find('.results--increase-value').text(rank > 0 ? rank : Math.abs(1 + index - result.solrRank));
       } else {
         node.find('.results--item-rank').remove();
       }
 
       node.find('.results--item-score-bar').each(function(i, score) {
-        if ((result.relevance - (i + 1)) >= 0)
+        if ((result.relevance - i - 1) >= 0)
           $(score).addClass('green');
       });
 

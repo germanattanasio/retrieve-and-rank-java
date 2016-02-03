@@ -13,5 +13,5 @@
 
     <application name="demo" context-root="/" location="${appLocation}" type="war">
     </application>
-    
+    <httpSession idLength="28"/>
 </server>

@@ -11,15 +11,15 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.ibm.watson.developer_cloud.retrieve_and_rank.v1.query;
+package com.ibm.watson.developer_cloud.retrieve_and_rank.v1.payload;
 
 /**
  * A payload object used to describe an incoming query from the client.
  */
-public class QueryRequest {
+public class QueryRequestPayload {
   
   private String query;
-  private int queryId = -1;
+  private int id = -1;
 
   /**
    * Returns the query which is to be sent to the WDS service.
@@ -44,8 +44,8 @@ public class QueryRequest {
    * 
    * @return returns -1 if the query is not one of the canned queries from the data set
    */
-  public int getQueryId() {
-    return queryId;
+  public int getId() {
+    return id;
   }
 
   /**
@@ -53,8 +53,8 @@ public class QueryRequest {
    *
    * @param queryId the new query id
    */
-  public void setQueryId(int queryId) {
-    this.queryId = queryId;
+  public void setId(int queryId) {
+    this.id = queryId;
   }
 
 }

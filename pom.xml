@@ -12,13 +12,23 @@
 	</parent>
 
 	<groupId>com.ibm.watson.developer_cloud</groupId>
-	<artifactId>retrieve-and-rank-v1-sample</artifactId>
+	<artifactId>retrieve-and-rank-demo</artifactId>
 	<version>0.5-SNAPSHOT</version>
 	<packaging>war</packaging>
 
 	<name>Retrieve and Rank V1 Sample</name>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.solr</groupId>
+			<artifactId>solr-solrj</artifactId>
+			<version>5.2.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.6</version>
+		</dependency>
 		<dependency>
 			<groupId>com.ibm.watson.developer_cloud</groupId>
 			<artifactId>java-sdk</artifactId>
@@ -29,11 +39,17 @@
 			<artifactId>geronimo-jaxrs_1.1_spec</artifactId>
 			<version>1.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>1.7.14</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-	    <finalName>webApp</finalName>
-	
+		<finalName>webApp</finalName>
+
 		<pluginManagement>
 			<plugins>
 				<plugin>

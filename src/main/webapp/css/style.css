@@ -1225,7 +1225,8 @@ pre[class^="language-"] > code[class^="language-"], pre[class^="language-"] > co
   color: #41d6c3
 }
 .results--increase-icon_DOWN {
-  color: #ff7832
+ color: #ff7832
+
 }
 .results--increase-value {
   font-size: 1.25em
