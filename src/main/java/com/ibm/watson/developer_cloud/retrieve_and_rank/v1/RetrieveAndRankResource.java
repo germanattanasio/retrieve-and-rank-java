@@ -121,8 +121,7 @@ public class RetrieveAndRankResource {
   @Path("/query")
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
-  public Response query(QueryRequestPayload body)
-      throws IOException, SolrServerException, InterruptedException {
+  public Response query(QueryRequestPayload body) {
     try {
       QueryResponsePayload queryResponse = new QueryResponsePayload();
       queryResponse.setQuery(body.getQuery());
@@ -164,7 +163,13 @@ public class RetrieveAndRankResource {
 
       return Response.ok(queryResponse).build();
     } catch (ServiceResponseException e) {
-      return Response.status(e.getStatusCode()).entity(createError(e)).build();
+      return Response.status(e.getStatusCode())
+          .entity(createError(e.getStatusCode(),e.getMessage()))
+          .build();
+    } catch (Exception e) {
+      return Response.status(500)
+          .entity(createError(500, "Internal Server Error. Did you create and train the service?"))
+          .build();
     }
   }
 
@@ -175,10 +180,10 @@ public class RetrieveAndRankResource {
    * @param e the {@link ServiceResponseException}
    * @return the JSON error as string
    */
-  private String createError(ServiceResponseException e) {
+  private String createError(int statusCode, String message) {
     JsonObject error = new JsonObject();
-    error.addProperty("code", e.getStatusCode());
-    error.addProperty("error", e.getMessage());
+    error.addProperty("code", statusCode);
+    error.addProperty("error", message);
     return error.toString();
   }
 

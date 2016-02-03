@@ -19,8 +19,8 @@
 function _error(xhr) {
   $('.error').show();
   var response = JSON.parse(xhr.responseText);
-  console.log(response.error.error);
-  $('.error h4').text(response.error.error || 'Internal server error.');
+  console.log(response.error);
+  $('.error h4').text(response.error || 'Internal server error.');
 }
 
 
@@ -50,9 +50,10 @@ $(document).ready(function() {
   });
 
   $('.input--question-generator').click(function(){
-//    query = queries[Math.floor(Math.random() * queries.length)];
-	  query = queries[19];
-
+	$('.error').hide();
+	$output.hide();
+	
+	query = queries[Math.floor(Math.random() * queries.length)];
     $query.text(query.query);
 
     $.ajax('api/query', { 
